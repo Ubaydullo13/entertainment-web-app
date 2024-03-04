@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+
+.rootPage{
+    padding: $padding-LR;
+    @include flex(row,flex-start,flex-start);
+    
+    @include breakpoint($bp-tablet){
+        flex-direction: column;
+    }
+
+    &__header{
+        background:$color-semi-dark-blue;
+        @include flex(column,space-between,center);
+        @include breakpoint($bp-tablet){
+            flex-direction: row;
+            width: 100%;
+            height: auto;
+            padding: 2rem;
+        }
+        @include breakpoint($bp-tablet){
+            padding: 2rem;
+        }
+        height: 92vh;
+        padding: 3.2rem;
+        border-radius:$border-radius;
+        &--logo{
+            height: auto;
+        }
+        
+        &--menu{
+            @include flex(column,center,center);
+            @include breakpoint($bp-tablet){
+                flex-direction: row;
+            }
+            &--item{
+                svg{
+                    transition: $transition;
+                    &:hover,&:active{
+                        path{
+                            fill:$color-white;
+                        }
+                    }
+                }
+                &:not(:last-child){
+                    margin-bottom: 4rem;
+                    @include breakpoint($bp-tablet){
+                        margin-bottom: 0;
+                        margin-right: 3.2rem;
+                    }
+                }
+            }
+        }
+
+        &--profile{
+            &--png{
+                width: 3.8rem;
+                height: 3.8rem;
+                border-radius: 100%;
+                border: 2px solid $color-white;
+            }
+        }
+    }
+
+    &__body{
+        width:90%;
+        @include breakpoint($bp-tablet){
+            width: 100%;
+        }
+    }
+}

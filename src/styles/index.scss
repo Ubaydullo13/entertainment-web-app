@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap');
+@import 'variables';
+
+
+html{
+    font-size: 62.5%;
+    
+    @include breakpoint($bp-tablet){
+        font-size: 56%;
+    }
+    
+    @include breakpoint($bp-mobile){
+        font-size: 52%;
+    }
+    @include breakpoint($bp-small){
+        font-size: 48%;
+    }
+}
+
+
+
+*,*::after,*::before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    box-sizing: border-box;
+    font-size: $font-body-S;
+    font-weight: $font-weight-body-M-S;
+    font-family: $font-family;
+    color: $color-white;
+    background: $color-dark-blue;
+}
