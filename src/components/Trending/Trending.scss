@@ -16,7 +16,7 @@
         width: 2040rem;
         height: 23rem;
         @include flex(row,center,center);
-        animation: animation 120s linear infinite;
+        animation: animation 200s linear infinite;
     }
     .trending::-webkit-scrollbar{
         display: none;

@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import SignIn from "../../components/SignIn/SignIn";
-import SignUp from "../../components/SignUp/SignUp";
+import { SignIn } from "../../components/SignIn"
+import { SignUp } from "../../components/SignUp";
 
 function Authentication() {
   return (

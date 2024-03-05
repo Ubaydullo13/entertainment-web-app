@@ -6,18 +6,21 @@ import Movies from "./Routes/Movies/Movies";
 import TVSeries from "./Routes/TvSeries/TvSeries";
 import Navigation from "./Routes/Navigation/Navigation";
 import Search from "./Routes/Search/Search";
+import { BookmarksProvider } from "./context/BookmarksContext";
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigation />}>
-        <Route index element={<Home />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/tv" element={<TVSeries />} />
-        <Route path="/bookmark" element={<Bookmark />} />
-        <Route path="/search" element={<Search />} />
-      </Route>
-      <Route path="auth/*" element={<Authentication />} />
-    </Routes>
+    <BookmarksProvider>
+      <Routes>
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<Home />} />
+          <Route path="/movie" element={<Movies />} />
+          <Route path="/tv" element={<TVSeries />} />
+          <Route path="/bookmark" element={<Bookmark />} />
+          <Route path="/search" element={<Search />} />
+        </Route>
+        <Route path="auth/*" element={<Authentication />} />
+      </Routes>
+    </BookmarksProvider>
   );
 }
 

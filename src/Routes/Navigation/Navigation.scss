@@ -35,9 +35,9 @@
             &--item{
                 svg{
                     transition: $transition;
-                    &:hover,&:active{
+                    &:hover{
                         path{
-                            fill:$color-white;
+                            fill:$color-orange;
                         }
                     }
                 }
@@ -48,15 +48,24 @@
                         margin-right: 3.2rem;
                     }
                 }
-            }
+                }
+                .active{
+                    svg{
+                        path{
+                            fill:$color-white;
+                        }
+                    }
+                }
         }
 
         &--profile{
-            &--png{
-                width: 3.8rem;
-                height: 3.8rem;
-                border-radius: 100%;
-                border: 2px solid $color-white;
+            svg{
+                transition: $transition;
+                    &:hover{
+                        path{
+                            fill:$color-orange;
+                        }
+                    }
             }
         }
     }

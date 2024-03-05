@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.svg"
 import FormInput from "../FormInput/FormInput";
@@ -29,7 +29,7 @@ function SignIn() {
           Login to your account
         </button>
         <p className="sign-in__prompt">
-          Don`t have an account &nbsp;{" "}
+          Don`t have an account? &nbsp;{" "}
           <Link className="sign-in__prompt--link" to="sign-up">
             Sign Up
           </Link>
@@ -39,4 +39,4 @@ function SignIn() {
   )
 }
 
-export default SignIn
+export  {SignIn}
