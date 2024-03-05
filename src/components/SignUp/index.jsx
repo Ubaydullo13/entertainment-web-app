@@ -30,7 +30,7 @@ function SignUp() {
         </button>
         <p className="sign-up__prompt">
           Already have an account? &nbsp;{" "}
-          <Link className="sign-up__prompt--link" to={"/auth"}>
+          <Link className="sign-up__prompt--link" to={"/sign-in"}>
             Login
           </Link>
         </p>
@@ -39,4 +39,4 @@ function SignUp() {
   );
 }
 
-export  {SignUp};
+export {SignUp};

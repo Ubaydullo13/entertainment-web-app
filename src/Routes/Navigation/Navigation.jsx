@@ -55,7 +55,7 @@ function Navigation() {
             </svg>
           </NavLink>
         </div>
-        <NavLink className="rootPage__header--profile" to="auth">
+        <NavLink className="rootPage__header--profile" to="/sign-in">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

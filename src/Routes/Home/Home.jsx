@@ -1,6 +1,4 @@
 import "./Home.scss";
-import { useContext } from "react";
-import { BookmarksContext } from "../../context/BookmarksContext";
 import Cards from "../../components/Cards/Cards";
 import Spinner from "../../components/Spinner/Spinner";
 import Trending from "../../components/Trending/Trending";
@@ -9,7 +7,6 @@ function Home() {
   const apiKey = import.meta.env.VITE_API_KEY;
   const apiUrl = `${import.meta.env.VITE_API}/v1.4/movie?page=8&limit=40`;
   const { data, isLoading } = useFetch(apiUrl, apiKey);
-  const { bookmarks, handleBookmark } = useContext(BookmarksContext);
   return (
     <div className="home">
       <h1 className="home__trending-header">Trending</h1>
@@ -25,8 +22,6 @@ function Home() {
                 <Cards
                   key={item.id}
                   item={item}
-                  bookmarks={bookmarks}
-                  handleBookmark={handleBookmark}
                 />
               ))}
           </div>
