@@ -14,7 +14,7 @@ function Bookmark() {
       <h1 className="bookmark__movies-heading">Bookmarked Movies</h1>
       <div className="bookmark__movies">
         {
-              bookmarks.map((item) => (
+             bookmarks.length && bookmarks.map((item) => (
                 <Cards key={item.id} item={item} />
               ))
             }
